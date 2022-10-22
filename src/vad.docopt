@@ -6,10 +6,15 @@ Usage:
    vad --version
 
 Options:
-   -i FILE, --input-wav=FILE   WAVE file for voice activity detection
-   -o FILE, --output-vad=FILE  Label file with the result of VAD
-   -w FILE, --output-wav=FILE  WAVE file with silences cleared
-   -1 REAL, --alfa1=REAL  Increment de l'umbral 1 [default: 0]
-   -v, --verbose  Show debug information
-   -h, --help     Show this screen
-   --version      Show the version of the project
+   -i FILE, --input-wav=FILE                 WAVE file for voice activity detection
+   -o FILE, --output-vad=FILE                Label file with the result of VAD
+   -w FILE, --output-wav=FILE                WAVE file with silences cleared
+   -1 FLOAT, --alpha1=FLOAT                  Guany per obtenir el llindar de deteccio 1 [default: 0]
+   -2 FLOAT, --alpha2=FLOAT                  Guany per obtenir el llindar de deteccio 2 [default: 0]
+   -t TIME, --frame_duration=TIME            Time duration of frames in ms [default: 0]
+   -s INT, --max_maybe_silence=INT           Number of frames for silence decision [default: 0]
+   -m INT, --max_maybe_voice=INT             Number of frames for voice decision [default: 0]
+   -p INT, --pinit=INT                       Number of frames for initial power calculation [default: 0]
+   -v, --verbose                             Show debug information
+   -h, --help                                Show this screen
+   --version                                 Show the version of the project

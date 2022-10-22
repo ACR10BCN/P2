@@ -43,7 +43,11 @@ Features compute_features(const float *x, int N) {
    * For the moment, compute random value between 0 and 1 
    */
   Features feat;
+
   feat.p = compute_power (x,N);
+  feat.zcr = compute_zcr(x,N,16000);
+  feat.am = compute_am(x,N);
+
   return feat;
 }
 
@@ -51,12 +55,17 @@ Features compute_features(const float *x, int N) {
  * TODO: Init the values of vad_data
  */
 
-VAD_DATA * vad_open(float rate, float alfa1) {
+VAD_DATA * vad_open(float rate, float alpha1, float alpha2, float frame_duration, int max_maybe_silence, int max_maybe_voice, int pinit) {
   VAD_DATA *vad_data = malloc(sizeof(VAD_DATA));
   vad_data->state = ST_INIT;
   vad_data->sampling_rate = rate;
   vad_data->frame_length = rate * FRAME_TIME * 1e-3;
-  vad_data->alfa1 = alfa1;
+  vad_data->alpha1 = alpha1; //k1 = k0 + alpha1
+  vad_data->alpha2 = alpha2; //k2 = k0 + aplha2
+  vad_data->max_maybe_silence = max_maybe_silence; //Numero de frames a l'estat maybe silence fins que decidim que es SILENCE
+  vad_data->max_maybe_voice = max_maybe_voice; //Numero de frames a l'estat maybe voice fins que decidim que es VOICE
+  vad_data->pinit = pinit; //Numero de frames que utilitzarem per calcular k0 (potencia inicial)
+  vad_data->k0 = 0; //Potencia inicial k0 (servira per calular k1 i k2)
   return vad_data;
 }
 
@@ -92,7 +101,7 @@ VAD_STATE vad(VAD_DATA *vad_data, float *x) {
   switch (vad_data->state) {
   case ST_INIT:
     vad_data->state = ST_SILENCE;
-    vad_data->umbral = f.p + vad_data->alfa1;
+    vad_data->umbral = f.p + vad_data->alpha1;
     break;
 
   case ST_SILENCE:

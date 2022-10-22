@@ -16,7 +16,12 @@ typedef struct {
     int verbose;
     int version;
     /* options with arguments */
-    char *alfa1;
+    char *alpha1;
+    char *alpha2;
+    char *frame_duration;
+    char *max_maybe_silence;
+    char *max_maybe_voice;
+    char *pinit;
     char *input_wav;
     char *output_vad;
     char *output_wav;
@@ -272,9 +277,9 @@ int elems_to_args(Elements *elements, DocoptArgs *args, bool help,
             args->verbose = option->value;
         } else if (!strcmp(option->olong, "--version")) {
             args->version = option->value;
-        } else if (!strcmp(option->olong, "--alfa1")) {
+        } else if (!strcmp(option->olong, "--alpha1")) {
             if (option->argument)
-                args->alfa1 = option->argument;
+                args->alpha1 = option->argument;
         } else if (!strcmp(option->olong, "--input-wav")) {
             if (option->argument)
                 args->input_wav = option->argument;

@@ -18,15 +18,21 @@ int main(int argc, char *argv[]) {
 
   VAD_DATA *vad_data;
   VAD_STATE state, last_state;
+  VAD_STATE undef_state;
 
   float *buffer, *buffer_zeros;
   int frame_size;         /* in samples */
   float frame_duration;   /* in seconds */
   unsigned int t, last_t; /* in frames */
+  unsigned int t_undef;
 
   char	*input_wav, *output_vad, *output_wav;
 
-  float alfa1;
+  float alpha1;
+  float alpha2;
+  int max_maybe_silence;
+  int max_maybe_voice;
+  int pinit;
 
   DocoptArgs args = docopt(argc, argv, /* help */ 1, /* version */ "2.0");
 
@@ -34,7 +40,12 @@ int main(int argc, char *argv[]) {
   input_wav  = args.input_wav;
   output_vad = args.output_vad;
   output_wav = args.output_wav;
-  alfa1 = atof(args.alfa1);
+  alpha1 = atof(args.alpha1);
+  alpha2 = atof(args.alpha2);
+  frame_duration = atof(args.frame_duration);
+  max_maybe_silence = atof(args.max_maybe_silence);
+  max_maybe_voice = atof(args.max_maybe_voice);
+  pinit = atof(args.pinit);
 
   if (input_wav == 0 || output_vad == 0) {
     fprintf(stderr, "%s\n", args.usage_pattern);
@@ -66,7 +77,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  vad_data = vad_open(sf_info.samplerate, alfa1);
+  vad_data = vad_open(sf_info.samplerate, alpha1, alpha2, frame_duration, max_maybe_silence, max_maybe_voice, pinit);
   /* Allocate memory for buffers */
   frame_size   = vad_frame_size(vad_data);
   buffer       = (float *) malloc(frame_size * sizeof(float));
@@ -74,7 +85,11 @@ int main(int argc, char *argv[]) {
   for (i=0; i< frame_size; ++i) buffer_zeros[i] = 0.0F;
 
   frame_duration = (float) frame_size/ (float) sf_info.samplerate;
-  last_state = ST_UNDEF;
+  last_state = ST_UNDEF; //Aquest estat es l'inicial? Si es el cas l'hauriem de posar com a silenci ja que generalment sempre comença per silenci un audio
+
+  last_state = ST_SILENCE; //Suposem que silenci es l'estat inicial
+  undef_state = ST_SILENCE; //Inicialitzem també el estat indefinit a silenci per si tenim un indefinit al principi
+  t_undef = 0; //Inicialitzem el temps que portem a indefinit a 0
 
   for (t = last_t = 0; ; t++) { /* For each frame ... */
     /* End loop when file has finished (or there is an error) */
@@ -83,19 +98,32 @@ int main(int argc, char *argv[]) {
     if (sndfile_out != 0) {
       /* TODO: copy all the samples into sndfile_out */
     }
-
     state = vad(vad_data, buffer);
     if (verbose & DEBUG_VAD) vad_show_state(vad_data, stdout);
 
     /* TODO: print only SILENCE and VOICE labels */
     /* As it is, it prints UNDEF segments but is should be merge to the proper value */
     if (state != last_state) {
-      if (t != last_t)
-        fprintf(vadfile, "%.5f\t%.5f\t%s\n", last_t * frame_duration, t * frame_duration, state2str(last_state));
-      last_state = state;
-      last_t = t;
-    }
+      //En el cas d'entrar en l'estat UNDEF, guardem el estat en el que es trobava anteriorment i el valor de t
+      if(state == ST_UNDEF){
+        t_undef = t;
+        undef_state = last_state;
+      }
+      if (t != last_t){
+        //En el cas d'entrar en un estat diferent al indefinit i que el anteior si sigui indefinit, comencem a contar el temps i guardem l'estat anterior
+        if ((state != undef_state) || (last_state == ST_UNDEF)){
+          fprintf(vadfile, "%.5f\t%.5f\t%s\n", last_t * frame_duration, t * frame_duration, state2str(last_state));
+          last_state = state;
+          last_t = t_undef;
 
+        //En el cas de que no ens trobem en indefinit, guardem directament el nou estat
+        }else if (state != ST_UNDEF){
+          fprintf(vadfile, "%.5f\t%.5f\t%s\n", last_t * frame_duration, t * frame_duration, state2str(last_state));
+          last_state = state;
+          last_t = t;
+        }
+      }
+    }
     if (sndfile_out != 0) {
       /* TODO: go back and write zeros in silence segments */
     }
