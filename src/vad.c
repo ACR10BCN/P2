@@ -59,7 +59,8 @@ VAD_DATA * vad_open(float rate, float alpha1, float alpha2, float frame_duration
   VAD_DATA *vad_data = malloc(sizeof(VAD_DATA));
   vad_data->state = ST_INIT;
   vad_data->sampling_rate = rate;
-  vad_data->frame_length = rate * FRAME_TIME * 1e-3;
+  vad_data->Ninit = 0;
+  vad_data->frame_length = rate * frame_duration * 1e-3;
   vad_data->alpha1 = alpha1; //k1 = k0 + alpha1
   vad_data->alpha2 = alpha2; //k2 = k0 + aplha2
   vad_data->max_maybe_silence = max_maybe_silence; //Numero de frames a l'estat maybe silence fins que decidim que es SILENCE
@@ -100,10 +101,18 @@ VAD_STATE vad(VAD_DATA *vad_data, float *x) {
 
   switch (vad_data->state) {
   case ST_INIT:
+    //Iniciem contador
+    vad_data->Ninit++;
     //Calculem la potencia mitja inicial
     vad_data->k0=vad_data->k0+pow(10,(f.p/10));
-    vad_data->state = ST_SILENCE;
-    vad_data->umbral = f.p + vad_data->alpha1;
+    if (vad_data->Ninit == vad_data->pinit){
+      vad_data->k0=10*log10(vad_data->k0/vad_data->Ninit); //Calculem la potencia mitja inicial amb la formula que s'ens proporciona
+      vad_data->k1=vad_data->k0+vad_data->alpha1; //Marge inferior
+      vad_data->k2=vad_data->k1+vad_data->alpha2; //Marge superior
+    
+      vad_data->state = ST_SILENCE;
+    }
+    //vad_data->umbral = f.p + vad_data->alpha1;
     break;
 
   case ST_SILENCE:

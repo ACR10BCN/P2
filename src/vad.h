@@ -17,6 +17,7 @@ typedef struct {
   unsigned int frame_length;
   float last_feature; /* for debuggin purposes */
   float umbral;
+  float Ninit;
   float k0;
   float k1;
   float k2;
