@@ -17,6 +17,9 @@ typedef struct {
   unsigned int frame_length;
   float last_feature; /* for debuggin purposes */
   float umbral;
+  float k0;
+  float k1;
+  float k2;
   float alpha1;
   float alpha2;
   int max_maybe_silence;

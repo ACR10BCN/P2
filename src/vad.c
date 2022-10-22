@@ -100,6 +100,8 @@ VAD_STATE vad(VAD_DATA *vad_data, float *x) {
 
   switch (vad_data->state) {
   case ST_INIT:
+    //Calculem la potencia mitja inicial
+    vad_data->k0=vad_data->k0+pow(10,(f.p/10));
     vad_data->state = ST_SILENCE;
     vad_data->umbral = f.p + vad_data->alpha1;
     break;
