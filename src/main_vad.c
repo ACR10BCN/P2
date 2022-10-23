@@ -90,6 +90,10 @@ int main(int argc, char *argv[]) {
       fprintf(stderr, "Error opening output wav file %s (%s)\n", output_wav, strerror(errno));
       return -1;
     }
+    if (sf_info.samplerate != 16000){
+      fprintf(stderr, "Wrong sample rate:(%s)\n", output_wav);
+      return -1;
+    }
   }
 
   vad_data = vad_open(sf_info.samplerate, alpha1, alpha2, frame_duration, max_maybe_silence, max_maybe_voice, pinit, alpha1zero, alpha2zero, min_silence, min_voice);
