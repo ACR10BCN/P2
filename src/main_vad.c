@@ -151,7 +151,6 @@ int main(int argc, char *argv[]) {
       }
     }
 
-
     //Primera pregunta del ampliable (intent)
 
     if (sndfile_out != 0) {
