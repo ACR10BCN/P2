@@ -53,7 +53,7 @@ Features compute_features(const float *x, int N) {
  * TODO: Init the values of vad_data
  */
 
-VAD_DATA * vad_open(float rate, float alpha1, float alpha2, float frame_duration, int max_maybe_silence, int max_maybe_voice, int pinit) {
+VAD_DATA * vad_open(float rate, float alpha1, float alpha2, float frame_duration, int max_maybe_silence, int max_maybe_voice, int pinit, float alpha1zero, float alpha2zero, int min_silence, int min_voice) {
   VAD_DATA *vad_data = malloc(sizeof(VAD_DATA));
   vad_data->state = ST_INIT;
   vad_data->sampling_rate = rate;
@@ -62,8 +62,12 @@ VAD_DATA * vad_open(float rate, float alpha1, float alpha2, float frame_duration
   vad_data->frame_length = rate * frame_duration * 1e-3;
   vad_data->alpha1 = alpha1;                                  //k1 = k0 + alpha1
   vad_data->alpha2 = alpha2;                                  //k2 = k0 + aplha2
+  vad_data->alpha1zero = alpha1zero;                          
+  vad_data->alpha2zero = alpha2zero;                          
   vad_data->max_maybe_silence = max_maybe_silence;            //Numero de frames a l'estat maybe silence fins que decidim que es SILENCE
   vad_data->max_maybe_voice = max_maybe_voice;                //Numero de frames a l'estat maybe voice fins que decidim que es VOICE
+  vad_data->min_silence = min_silence;                        //Duracio minima de un silenci
+  vad_data->min_voice = min_voice;                        //Duracio minima de un voice
   vad_data->pinit = pinit;                                    //Numero de frames que utilitzarem per calcular k0 (potencia inicial)
   vad_data->k0 = 0;                                           //Potencia inicial k0 (servira per calular k1 i k2)
   return vad_data;
@@ -73,6 +77,7 @@ VAD_STATE vad_close(VAD_DATA *vad_data) {
   /* 
    * TODO: decide what to do with the last undecided frames
    */
+
   VAD_STATE state;
   if(vad_data->state == ST_SILENCE || vad_data->state == ST_VOICE){
     state = vad_data->state;
@@ -113,6 +118,10 @@ VAD_STATE vad(VAD_DATA *vad_data, float *x) {
       vad_data->k0=10*log10(vad_data->k0/vad_data->Ninit); //Calculem la potencia mitja inicial amb la formula que s'ens proporciona
       vad_data->k1=vad_data->k0+vad_data->alpha1; //Marge inferior
       vad_data->k2=vad_data->k1+vad_data->alpha2; //Marge superior
+      vad_data->k0zero = vad_data-> k0zero/vad_data->Ninit;
+      vad_data->k1zero = vad_data-> k0zero+vad_data->alpha1zero;
+      vad_data->k1zero = vad_data-> k1zero+vad_data->alpha2zero;
+      
     
       vad_data->state = ST_SILENCE;
     }
@@ -120,23 +129,23 @@ VAD_STATE vad(VAD_DATA *vad_data, float *x) {
     break;
 
   case ST_SILENCE:
-    if (f.p > vad_data->k1){
+    if (f.p > vad_data->k1 || f.zcr > vad_data->k2zero){
       vad_data->state = ST_MAYBE_VOICE;
     }
     break;
 
   case ST_VOICE:
-    if (f.p < vad_data->k1){
+    if (f.p < vad_data->k1 && f.zcr < vad_data->k1zero){
       vad_data->state = ST_MAYBE_SILENCE;
     }
     break;
   
   case ST_MAYBE_VOICE:
-    if(vad_data->aux == vad_data->max_maybe_voice){
+    if(vad_data->aux >= vad_data->max_maybe_voice){
       vad_data->aux = 0;
       vad_data->state = ST_SILENCE;
 
-    } else if (f.p > vad_data->k2){
+    } else if ((f.p > vad_data->k2 || f.zcr > vad_data->k2zero) && (vad_data->aux >= vad_data->min_voice)){
       vad_data->aux = 0;
       vad_data->state = ST_VOICE;
     } else {
@@ -145,11 +154,11 @@ VAD_STATE vad(VAD_DATA *vad_data, float *x) {
   break;
 
   case ST_MAYBE_SILENCE:
-    if(vad_data->aux == vad_data->max_maybe_silence){
+    if(((f.p < vad_data->k1 && f.zcr < vad_data->k1zero) && vad_data->aux >= vad_data->min_silence) || vad_data->aux >= vad_data->max_maybe_silence){
       vad_data->aux = 0;
       vad_data->state = ST_SILENCE;
 
-    } else if (f.p > vad_data->k2){
+    } else if (f.p > vad_data->k2 || f.zcr > vad_data->k2zero){
       vad_data->aux = 0;
       vad_data->state = ST_VOICE;
     } else {

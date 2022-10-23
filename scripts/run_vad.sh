@@ -40,6 +40,22 @@ if [ $# -eq 6 ]
   then
     CMD="$DIR_P2/bin/vad --alpha1=$1 --alpha2=$2 --frame_duration=$3 --max_maybe_silence=$4 --max_maybe_voice=$5 --pinit=$6"
 fi
+if [ $# -eq 7 ]
+  then
+    CMD="$DIR_P2/bin/vad --alpha1=$1 --alpha2=$2 --frame_time_ms=$3 --max_st_maybe_silence=$4 --max_st_maybe_voice=$5 --pnumber_init=$6 --alpha1zero=$7"
+fi
+if [ $# -eq 8 ]
+  then
+    CMD="$DIR_P2/bin/vad --alpha1=$1 --alpha2=$2 --frame_time_ms=$3 --max_st_maybe_silence=$4 --max_st_maybe_voice=$5 --pnumber_init=$6 --alpha1zero=$7 --alpha2zero=$8"
+fi
+if [ $# -eq 9 ]
+  then
+    CMD="$DIR_P2/bin/vad --alpha1=$1 --alpha2=$2 --frame_time_ms=$3 --max_st_maybe_silence=$4 --max_st_maybe_voice=$5 --pnumber_init=$6 --alpha1zero=$7 --alpha2zero=$8 --min_silence=$9"
+fi
+if [ $# -eq 10 ]
+  then
+    CMD="$DIR_P2/bin/vad --alpha1=$1 --alpha2=$2 --frame_time_ms=$3 --max_st_maybe_silence=$4 --max_st_maybe_voice=$5 --pnumber_init=$6 --alpha1zero=$7 --alpha2zero=$8 --min_silence=$9 --min_voice=${10}"
+fi
 
 #CMD="$DIR_P2/bin/vad --alpha1=5"
 

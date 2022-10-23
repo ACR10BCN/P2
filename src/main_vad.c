@@ -26,27 +26,40 @@ int main(int argc, char *argv[]) {
   unsigned int t, last_t; /* in frames */
   unsigned int t_undef;
 
-  char	*input_wav, *output_vad, *output_wav;
+  
 
   float alpha1;
   float alpha2;
+  float alpha1zero;
+  float alpha2zero;
   int max_maybe_silence;
   int max_maybe_voice;
+  int min_silence;
+  int min_voice;
   int pinit;
-
+  char	*input_wav, *output_vad, *output_wav;
   DocoptArgs args = docopt(argc, argv, /* help */ 1, /* version */ "2.0");
 
   verbose    = args.verbose ? DEBUG_VAD : 0;
   input_wav  = args.input_wav;
   output_vad = args.output_vad;
   output_wav = args.output_wav;
+
   alpha1 = atof(args.alpha1);
   alpha2 = atof(args.alpha2);
+
+  alpha1zero = atof (args.alpha1zero);
+  alpha2zero = atof (args.alpha2zero);
+
   frame_duration = atof(args.frame_duration);
+
   max_maybe_silence = atof(args.max_maybe_silence);
   max_maybe_voice = atof(args.max_maybe_voice);
-  pinit = atof(args.pinit);
+  min_silence = atof(args.min_silence);
+  min_voice = atof(args.min_voice);
 
+  pinit = atof(args.pinit);
+  
   if (input_wav == 0 || output_vad == 0) {
     fprintf(stderr, "%s\n", args.usage_pattern);
     return -1;
@@ -79,7 +92,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  vad_data = vad_open(sf_info.samplerate, alpha1, alpha2, frame_duration, max_maybe_silence, max_maybe_voice, pinit);
+  vad_data = vad_open(sf_info.samplerate, alpha1, alpha2, frame_duration, max_maybe_silence, max_maybe_voice, pinit, alpha1zero, alpha2zero, min_silence, min_voice);
   /* Allocate memory for buffers */
   frame_size   = vad_frame_size(vad_data);
   buffer       = (float *) malloc(frame_size * sizeof(float));
@@ -114,7 +127,8 @@ int main(int argc, char *argv[]) {
       }
       if (t != last_t){
         //En el cas d'entrar en un estat diferent al indefinit i que el anteior si sigui indefinit, comencem a contar el temps i guardem l'estat anterior
-        if ((state != undef_state) || (last_state == undef_state)){
+        if ((state != undef_state) || (last_state == ST_UNDEF)){
+          
           fprintf(vadfile, "%.5f\t%.5f\t%s\n", last_t * frame_duration, t * frame_duration, state2str(last_state));
           last_state = state;
           last_t = t_undef;
