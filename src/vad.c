@@ -5,7 +5,7 @@
 #include "vad.h"
 #include "pav_analysis.h"
 
-const float FRAME_TIME = 10.0F; /* in ms. */
+//const float FRAME_TIME = 10.0F; /* in ms. */
 
 /* 
  * As the output state is only ST_VOICE, ST_SILENCE, or ST_UNDEF,
@@ -43,11 +43,9 @@ Features compute_features(const float *x, int N) {
    * For the moment, compute random value between 0 and 1 
    */
   Features feat;
-
   feat.p = compute_power (x,N);
   feat.zcr = compute_zcr(x,N,16000);
   feat.am = compute_am(x,N);
-
   return feat;
 }
 
@@ -59,15 +57,15 @@ VAD_DATA * vad_open(float rate, float alpha1, float alpha2, float frame_duration
   VAD_DATA *vad_data = malloc(sizeof(VAD_DATA));
   vad_data->state = ST_INIT;
   vad_data->sampling_rate = rate;
-  vad_data->aux = 0; //Ens serveix per contar el numero total de trames undefined
-  vad_data->Ninit = 0; //Num trames inicials per calcular la potencia mitja inicial
+  vad_data->aux = 0;                                          //Ens serveix per contar el numero total de trames undefined
+  vad_data->Ninit = 0;                                        //Num trames inicials per calcular la potencia mitja inicial
   vad_data->frame_length = rate * frame_duration * 1e-3;
-  vad_data->alpha1 = alpha1; //k1 = k0 + alpha1
-  vad_data->alpha2 = alpha2; //k2 = k0 + aplha2
-  vad_data->max_maybe_silence = max_maybe_silence; //Numero de frames a l'estat maybe silence fins que decidim que es SILENCE
-  vad_data->max_maybe_voice = max_maybe_voice; //Numero de frames a l'estat maybe voice fins que decidim que es VOICE
-  vad_data->pinit = pinit; //Numero de frames que utilitzarem per calcular k0 (potencia inicial)
-  vad_data->k0 = 0; //Potencia inicial k0 (servira per calular k1 i k2)
+  vad_data->alpha1 = alpha1;                                  //k1 = k0 + alpha1
+  vad_data->alpha2 = alpha2;                                  //k2 = k0 + aplha2
+  vad_data->max_maybe_silence = max_maybe_silence;            //Numero de frames a l'estat maybe silence fins que decidim que es SILENCE
+  vad_data->max_maybe_voice = max_maybe_voice;                //Numero de frames a l'estat maybe voice fins que decidim que es VOICE
+  vad_data->pinit = pinit;                                    //Numero de frames que utilitzarem per calcular k0 (potencia inicial)
+  vad_data->k0 = 0;                                           //Potencia inicial k0 (servira per calular k1 i k2)
   return vad_data;
 }
 
@@ -75,7 +73,12 @@ VAD_STATE vad_close(VAD_DATA *vad_data) {
   /* 
    * TODO: decide what to do with the last undecided frames
    */
-  VAD_STATE state = vad_data->state;
+  VAD_STATE state;
+  if(vad_data->state == ST_SILENCE || vad_data->state == ST_VOICE){
+    state = vad_data->state;
+  } else {
+    state = ST_SILENCE;
+  }
 
   free(vad_data);
   return state;
@@ -158,11 +161,11 @@ VAD_STATE vad(VAD_DATA *vad_data, float *x) {
     break;
   }
 
-  if (vad_data->state == ST_SILENCE ||
-      vad_data->state == ST_VOICE)
+  if (vad_data->state == ST_SILENCE ||vad_data->state == ST_VOICE){
     return vad_data->state;
-  else
+  } else {
     return ST_UNDEF;
+  }
 }
 
 void vad_show_state(const VAD_DATA *vad_data, FILE *out) {

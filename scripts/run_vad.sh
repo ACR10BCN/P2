@@ -14,6 +14,7 @@ CMD="$DIR_P2/bin/vad"
 
 # Saps pq salta aquest error??
 # scripts/run_vad.sh: línea 18: error sintáctico cerca del elemento inesperado `}'
+# Eren els {} del if que nose pq no l'hi agraden
 
 if [ $# -eq 1 ]
   then

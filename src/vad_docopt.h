@@ -19,12 +19,12 @@ typedef struct {
     char *alpha1;
     char *alpha2;
     char *frame_duration;
+    char *input_wav;
     char *max_maybe_silence;
     char *max_maybe_voice;
-    char *pinit;
-    char *input_wav;
     char *output_vad;
     char *output_wav;
+    char *pinit;
     /* special */
     const char *usage_pattern;
     const char *help_message;
@@ -39,13 +39,18 @@ const char help_message[] =
 "   vad --version\n"
 "\n"
 "Options:\n"
-"   -i FILE, --input-wav=FILE   WAVE file for voice activity detection\n"
-"   -o FILE, --output-vad=FILE  Label file with the result of VAD\n"
-"   -w FILE, --output-wav=FILE  WAVE file with silences cleared\n"
-"   -1 REAL, --alfa1=REAL  Increment de l'umbral 1 [default: 0]\n"
-"   -v, --verbose  Show debug information\n"
-"   -h, --help     Show this screen\n"
-"   --version      Show the version of the project\n"
+"   -i FILE, --input-wav=FILE                 WAVE file for voice activity detection\n"
+"   -o FILE, --output-vad=FILE                Label file with the result of VAD\n"
+"   -w FILE, --output-wav=FILE                WAVE file with silences cleared\n"
+"   -1 FLOAT, --alpha1=FLOAT                  Guany per obtenir el llindar de deteccio 1 [default: 0]\n"
+"   -2 FLOAT, --alpha2=FLOAT                  Guany per obtenir el llindar de deteccio 2 [default: 0]\n"
+"   -t TIME, --frame_duration=TIME            Time duration of frames in ms [default: 0]\n"
+"   -s INT, --max_maybe_silence=INT           Number of frames for silence decision [default: 0]\n"
+"   -m INT, --max_maybe_voice=INT             Number of frames for voice decision [default: 0]\n"
+"   -p INT, --pinit=INT                       Number of frames for initial power calculation [default: 0]\n"
+"   -v, --verbose                             Show debug information\n"
+"   -h, --help                                Show this screen\n"
+"   --version                                 Show the version of the project\n"
 "";
 
 const char usage_pattern[] =
@@ -280,15 +285,30 @@ int elems_to_args(Elements *elements, DocoptArgs *args, bool help,
         } else if (!strcmp(option->olong, "--alpha1")) {
             if (option->argument)
                 args->alpha1 = option->argument;
+        } else if (!strcmp(option->olong, "--alpha2")) {
+            if (option->argument)
+                args->alpha2 = option->argument;
+        } else if (!strcmp(option->olong, "--frame_duration")) {
+            if (option->argument)
+                args->frame_duration = option->argument;
         } else if (!strcmp(option->olong, "--input-wav")) {
             if (option->argument)
                 args->input_wav = option->argument;
+        } else if (!strcmp(option->olong, "--max_maybe_silence")) {
+            if (option->argument)
+                args->max_maybe_silence = option->argument;
+        } else if (!strcmp(option->olong, "--max_maybe_voice")) {
+            if (option->argument)
+                args->max_maybe_voice = option->argument;
         } else if (!strcmp(option->olong, "--output-vad")) {
             if (option->argument)
                 args->output_vad = option->argument;
         } else if (!strcmp(option->olong, "--output-wav")) {
             if (option->argument)
                 args->output_wav = option->argument;
+        } else if (!strcmp(option->olong, "--pinit")) {
+            if (option->argument)
+                args->pinit = option->argument;
         }
     }
     /* commands */
@@ -309,7 +329,8 @@ int elems_to_args(Elements *elements, DocoptArgs *args, bool help,
 
 DocoptArgs docopt(int argc, char *argv[], bool help, const char *version) {
     DocoptArgs args = {
-        0, 0, 0, (char*) "0", NULL, NULL, NULL,
+        0, 0, 0, (char*) "0", (char*) "0", (char*) "0", NULL, (char*) "0",
+        (char*) "0", NULL, NULL, (char*) "0",
         usage_pattern, help_message
     };
     Tokens ts;
@@ -321,12 +342,17 @@ DocoptArgs docopt(int argc, char *argv[], bool help, const char *version) {
         {"-h", "--help", 0, 0, NULL},
         {"-v", "--verbose", 0, 0, NULL},
         {NULL, "--version", 0, 0, NULL},
-        {"-1", "--alfa1", 1, 0, NULL},
+        {"-1", "--alpha1", 1, 0, NULL},
+        {"-2", "--alpha2", 1, 0, NULL},
+        {"-t", "--frame_duration", 1, 0, NULL},
         {"-i", "--input-wav", 1, 0, NULL},
+        {"-s", "--max_maybe_silence", 1, 0, NULL},
+        {"-m", "--max_maybe_voice", 1, 0, NULL},
         {"-o", "--output-vad", 1, 0, NULL},
-        {"-w", "--output-wav", 1, 0, NULL}
+        {"-w", "--output-wav", 1, 0, NULL},
+        {"-p", "--pinit", 1, 0, NULL}
     };
-    Elements elements = {0, 0, 7, commands, arguments, options};
+    Elements elements = {0, 0, 12, commands, arguments, options};
 
     ts = tokens_new(argc, argv);
     if (parse_args(&ts, &elements))

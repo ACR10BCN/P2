@@ -63,11 +63,13 @@ int main(int argc, char *argv[]) {
     return -2;
   }
 
+
   /* Open vad file */
   if ((vadfile = fopen(output_vad, "wt")) == 0) {
     fprintf(stderr, "Error opening output vad file %s (%s)\n", output_vad, strerror(errno));
     return -1;
   }
+
 
   /* Open output sound file, with same format, channels, etc. than input */
   if (output_wav) {
@@ -85,7 +87,7 @@ int main(int argc, char *argv[]) {
   for (i=0; i< frame_size; ++i) buffer_zeros[i] = 0.0F;
 
   frame_duration = (float) frame_size/ (float) sf_info.samplerate;
-  last_state = ST_UNDEF; //Aquest estat es l'inicial? Si es el cas l'hauriem de posar com a silenci ja que generalment sempre comença per silenci un audio
+  //last_state = ST_UNDEF; //Aquest estat es l'inicial? Si es el cas l'hauriem de posar com a silenci ja que generalment sempre comença per silenci un audio
 
   last_state = ST_SILENCE; //Suposem que silenci es l'estat inicial
   undef_state = ST_SILENCE; //Inicialitzem també el estat indefinit a silenci per si tenim un indefinit al principi
@@ -98,6 +100,7 @@ int main(int argc, char *argv[]) {
     if (sndfile_out != 0) {
       /* TODO: copy all the samples into sndfile_out */
     }
+
     state = vad(vad_data, buffer);
     if (verbose & DEBUG_VAD) vad_show_state(vad_data, stdout);
 
@@ -111,7 +114,7 @@ int main(int argc, char *argv[]) {
       }
       if (t != last_t){
         //En el cas d'entrar en un estat diferent al indefinit i que el anteior si sigui indefinit, comencem a contar el temps i guardem l'estat anterior
-        if ((state != undef_state) || (last_state == ST_UNDEF)){
+        if ((state != undef_state) || (last_state == undef_state)){
           fprintf(vadfile, "%.5f\t%.5f\t%s\n", last_t * frame_duration, t * frame_duration, state2str(last_state));
           last_state = state;
           last_t = t_undef;
@@ -124,10 +127,12 @@ int main(int argc, char *argv[]) {
         }
       }
     }
+
     if (sndfile_out != 0) {
       /* TODO: go back and write zeros in silence segments */
     }
   }
+
 
   state = vad_close(vad_data);
   /* TODO: what do you want to print, for last frames? */
