@@ -90,8 +90,25 @@ int main(int argc, char *argv[]) {
       fprintf(stderr, "Error opening output wav file %s (%s)\n", output_wav, strerror(errno));
       return -1;
     }
+
+    //Primera pregunta del ampliable
+    //Prenem com a referencia les codicions que vam utilitzar per l'ampliable de la practica 1
+
+    //Comprovem que el sample rate sigui de 16k
     if (sf_info.samplerate != 16000){
       fprintf(stderr, "Wrong sample rate:(%s)\n", output_wav);
+      return -1;
+    }
+
+    //Comprovem que el canal sigui mono
+    if (sf_info.channels != 1){
+      fprintf(stderr, "Wrong number of channels (no mono):(%s)\n", output_wav);
+      return -1;
+    }
+
+    //Comprovem que el format sigui WAV
+    if (sf_info.format != 65538){
+      fprintf(stderr, "Diferent file format:(%s)\n", output_wav);
       return -1;
     }
   }

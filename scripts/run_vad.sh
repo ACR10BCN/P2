@@ -8,7 +8,7 @@ DIR_P2=$HOME/PAV/P2
 DB=$DIR_P2/db.v4
 CMD="$DIR_P2/bin/vad"
 
-# Ampliable 2, parametres accesibles desde la linea de comando
+# Segona pregunta del ampliable, parametres accesibles desde la linea de comando
 # He trobat un tuto a Youtube d'algu que ho feia aixi, no se si esta be pq em dona l'error de violacion del segmento
 # Com no sabem quants arguments tindrem a la linea de comandos, fem un if amb diferent numero de parametres
 
