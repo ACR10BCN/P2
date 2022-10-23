@@ -15,6 +15,7 @@ int main(int argc, char *argv[]) {
   SF_INFO sf_info;
   FILE *vadfile;
   int n_read = 0, i;
+  //int n_write = 0;
 
   VAD_DATA *vad_data;
   VAD_STATE state, last_state;
@@ -90,27 +91,6 @@ int main(int argc, char *argv[]) {
       fprintf(stderr, "Error opening output wav file %s (%s)\n", output_wav, strerror(errno));
       return -1;
     }
-
-    //Primera pregunta del ampliable
-    //Prenem com a referencia les codicions que vam utilitzar per l'ampliable de la practica 1
-
-    //Comprovem que el sample rate sigui de 16k
-    if (sf_info.samplerate != 16000){
-      fprintf(stderr, "Wrong sample rate:(%s)\n", output_wav);
-      return -1;
-    }
-
-    //Comprovem que el canal sigui mono
-    if (sf_info.channels != 1){
-      fprintf(stderr, "Wrong number of channels (no mono):(%s)\n", output_wav);
-      return -1;
-    }
-
-    //Comprovem que el format sigui WAV
-    if (sf_info.format != 65538){
-      fprintf(stderr, "Diferent file format:(%s)\n", output_wav);
-      return -1;
-    }
   }
 
   vad_data = vad_open(sf_info.samplerate, alpha1, alpha2, frame_duration, max_maybe_silence, max_maybe_voice, pinit, alpha1zero, alpha2zero, min_silence, min_voice);
@@ -171,8 +151,16 @@ int main(int argc, char *argv[]) {
       }
     }
 
+
+    //Primera pregunta del ampliable (intent)
+
     if (sndfile_out != 0) {
       /* TODO: go back and write zeros in silence segments */
+      if (state == ST_SILENCE && sndfile_out != 0) {
+      sf_seek(sndfile_out, -frame_size, SEEK_CUR);
+      sf_write_float(sndfile_out, buffer_zeros, frame_size);
+    }
+      last_state = state;
     }
   }
 
