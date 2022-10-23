@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /* TODO: add the needed states */
-typedef enum {ST_UNDEF=0, ST_SILENCE, ST_VOICE, ST_INIT} VAD_STATE;
+typedef enum {ST_UNDEF=0, ST_SILENCE, ST_VOICE, ST_INIT, ST_MAYBE_SILENCE, ST_MAYBE_VOICE} VAD_STATE; //Afegim els estats ST_MAYBE_SILENCE i ST_MAYBE_VOICE
 
 /* Return a string label associated to each state */
 const char *state2str(VAD_STATE st);
@@ -18,6 +18,7 @@ typedef struct {
   float last_feature; /* for debuggin purposes */
   float umbral;
   float Ninit;
+  float aux;
   float k0;
   float k1;
   float k2;

@@ -59,7 +59,8 @@ VAD_DATA * vad_open(float rate, float alpha1, float alpha2, float frame_duration
   VAD_DATA *vad_data = malloc(sizeof(VAD_DATA));
   vad_data->state = ST_INIT;
   vad_data->sampling_rate = rate;
-  vad_data->Ninit = 0;
+  vad_data->aux = 0; //Ens serveix per contar el numero total de trames undefined
+  vad_data->Ninit = 0; //Num trames inicials per calcular la potencia mitja inicial
   vad_data->frame_length = rate * frame_duration * 1e-3;
   vad_data->alpha1 = alpha1; //k1 = k0 + alpha1
   vad_data->alpha2 = alpha2; //k2 = k0 + aplha2
@@ -116,16 +117,42 @@ VAD_STATE vad(VAD_DATA *vad_data, float *x) {
     break;
 
   case ST_SILENCE:
-    if (f.p > vad_data->umbral){
-      vad_data->state = ST_VOICE;
+    if (f.p > vad_data->k1){
+      vad_data->state = ST_MAYBE_VOICE;
     }
     break;
 
   case ST_VOICE:
-    if (f.p < vad_data->umbral){
-      vad_data->state = ST_SILENCE;
+    if (f.p < vad_data->k1){
+      vad_data->state = ST_MAYBE_SILENCE;
     }
     break;
+  
+  case ST_MAYBE_VOICE:
+    if(vad_data->aux == vad_data->max_maybe_voice){
+      vad_data->aux = 0;
+      vad_data->state = ST_SILENCE;
+
+    } else if (f.p > vad_data->k2){
+      vad_data->aux = 0;
+      vad_data->state = ST_VOICE;
+    } else {
+      vad_data->aux++;
+    }
+  break;
+
+  case ST_MAYBE_SILENCE:
+    if(vad_data->aux == vad_data->max_maybe_silence){
+      vad_data->aux = 0;
+      vad_data->state = ST_SILENCE;
+
+    } else if (f.p > vad_data->k2){
+      vad_data->aux = 0;
+      vad_data->state = ST_VOICE;
+    } else {
+      vad_data->aux++;
+    }
+  break;
 
   case ST_UNDEF:
     break;
