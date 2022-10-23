@@ -27,16 +27,16 @@ int main(int argc, char *argv[]) {
   unsigned int t, last_t; /* in frames */
   unsigned int t_undef;
 
-  
-
   float alpha1;
   float alpha2;
   float alpha1zero;
   float alpha2zero;
+
   int max_maybe_silence;
   int max_maybe_voice;
   int min_silence;
   int min_voice;
+  
   int pinit;
   char	*input_wav, *output_vad, *output_wav;
   DocoptArgs args = docopt(argc, argv, /* help */ 1, /* version */ "2.0");
