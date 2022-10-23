@@ -46,16 +46,16 @@ const char help_message[] =
 "   -i FILE, --input-wav=FILE                 WAVE file for voice activity detection\n"
 "   -o FILE, --output-vad=FILE                Label file with the result of VAD\n"
 "   -w FILE, --output-wav=FILE                WAVE file with silences cleared\n"
-"   -1 FLOAT, --alpha1=FLOAT                  Guany per obtenir el llindar de deteccio 1 [default: 1]\n"
-"   -2 FLOAT, --alpha2=FLOAT                  Guany per obtenir el llindar de deteccio 2 [default: 6]\n"
-"   -t TIME, --frame_duration=TIME            Time duration of frames in ms [default: 10]\n"
-"   -s INT, --max_maybe_silence=INT           Number of frames for silence decision [default: 5]\n"
-"   -m INT, --max_maybe_voice=INT             Number of frames for voice decision [default: 50]\n"
-"   -p INT, --pinit=INT                       Number of frames for initial power calculation [default: 10]\n"
-"   -3 FLOAT, --alpha1zero=FLOAT              Guany per obtenir el llindar de deteccio de zcr 1 [default: 1500]\n"
-"   -4 FLOAT, --alpha2zero=FLOAT              Guany per obtenir el llindar de deteccio de zcr 2 [default: 500]\n"
-"   -5 INT, --min_silence=INT                 Min number of frames for silence decision [default: 5]\n"
-"   -6 INT, --min_voice=INT                   Min number of frames for voice decision [default: 0]\n"
+"   -1 FLOAT, --alpha1=FLOAT                  Guany per obtenir el llindar de deteccio 1 [default: 1.83]\n"
+"   -2 FLOAT, --alpha2=FLOAT                  Guany per obtenir el llindar de deteccio 2 [default: 7.59]\n"
+"   -3 FLOAT, --alpha1zero=FLOAT              Guany per obtenir el llindar de deteccio de 1 [default: 1825]\n"
+"   -4 FLOAT, --alpha2zero=FLOAT              Guany per obtenir el llindar de deteccio de 2 [default: 750]\n"
+"   -5 INT, --min_silence=INT                 Numero minim de frames per decidir SILENCE [default: 6]\n"
+"   -6 INT, --min_voice=INT                   Numero minim de frames per decidir VOICE [default: 0]\n"
+"   -t TIME, --frame_duration=TIME            Duracio frames en ms [default: 10]\n"
+"   -s INT, --max_maybe_silence=INT           Numero de frames per decidir SILENCE [default: 9]\n"
+"   -m INT, --max_maybe_voice=INT             Numero de frames per decidir VOICE [default: 67]\n"
+"   -p INT, --pinit=INT                       Numero de frames per calcular potencia inicial [default: 8]\n"
 "   -v, --verbose                             Show debug information\n"
 "   -h, --help                                Show this screen\n"
 "   --version                                 Show the version of the project\n"
@@ -349,9 +349,9 @@ int elems_to_args(Elements *elements, DocoptArgs *args, bool help,
 
 DocoptArgs docopt(int argc, char *argv[], bool help, const char *version) {
     DocoptArgs args = {
-        0, 0, 0, (char*) "1", (char*) "1500", (char*) "6", (char*) "500",
-        (char*) "10", NULL, (char*) "5", (char*) "50", (char*) "5", (char*) "0",
-        NULL, NULL, (char*) "10",
+        0, 0, 0, (char*) "1.83", (char*) "1825", (char*) "7.59", (char*) "750",
+        (char*) "10", NULL, (char*) "9", (char*) "67", (char*) "6", (char*) "0",
+        NULL, NULL, (char*) "8",
         usage_pattern, help_message
     };
     Tokens ts;

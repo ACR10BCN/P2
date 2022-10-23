@@ -114,13 +114,14 @@ VAD_STATE vad(VAD_DATA *vad_data, float *x) {
     vad_data->Ninit++;
     //Calculem la potencia mitja inicial
     vad_data->k0=vad_data->k0+pow(10,(f.p/10));
+    vad_data->k0zero=vad_data->k0zero+f.zcr;
     if (vad_data->Ninit == vad_data->pinit){
       vad_data->k0=10*log10(vad_data->k0/vad_data->Ninit); //Calculem la potencia mitja inicial amb la formula que s'ens proporciona
       vad_data->k1=vad_data->k0+vad_data->alpha1; //Marge inferior
       vad_data->k2=vad_data->k1+vad_data->alpha2; //Marge superior
       vad_data->k0zero = vad_data-> k0zero/vad_data->Ninit;
       vad_data->k1zero = vad_data-> k0zero+vad_data->alpha1zero;
-      vad_data->k1zero = vad_data-> k1zero+vad_data->alpha2zero;
+      vad_data->k2zero = vad_data-> k1zero+vad_data->alpha2zero;
       
     
       vad_data->state = ST_SILENCE;

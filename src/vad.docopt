@@ -9,16 +9,16 @@ Options:
    -i FILE, --input-wav=FILE                 WAVE file for voice activity detection
    -o FILE, --output-vad=FILE                Label file with the result of VAD
    -w FILE, --output-wav=FILE                WAVE file with silences cleared
-   -1 FLOAT, --alpha1=FLOAT                  Guany per obtenir el llindar de deteccio 1 [default: 1]
-   -2 FLOAT, --alpha2=FLOAT                  Guany per obtenir el llindar de deteccio 2 [default: 6]
-   -t TIME, --frame_duration=TIME            Time duration of frames in ms [default: 10]
-   -s INT, --max_maybe_silence=INT           Number of frames for silence decision [default: 5]
-   -m INT, --max_maybe_voice=INT             Number of frames for voice decision [default: 50]
-   -p INT, --pinit=INT                       Number of frames for initial power calculation [default: 10]
-   -3 FLOAT, --alpha1zero=FLOAT              Guany per obtenir el llindar de deteccio de zcr 1 [default: 1500]
-   -4 FLOAT, --alpha2zero=FLOAT              Guany per obtenir el llindar de deteccio de zcr 2 [default: 500]
-   -5 INT, --min_silence=INT                 Min number of frames for silence decision [default: 5]
-   -6 INT, --min_voice=INT                   Min number of frames for voice decision [default: 0]
+   -1 FLOAT, --alpha1=FLOAT                  Guany per obtenir el llindar de deteccio 1 [default: 1.83]
+   -2 FLOAT, --alpha2=FLOAT                  Guany per obtenir el llindar de deteccio 2 [default: 7.59]
+   -3 FLOAT, --alpha1zero=FLOAT              Guany per obtenir el llindar de deteccio de 1 [default: 1825]
+   -4 FLOAT, --alpha2zero=FLOAT              Guany per obtenir el llindar de deteccio de 2 [default: 750]
+   -5 INT, --min_silence=INT                 Numero minim de frames per decidir SILENCE [default: 6]
+   -6 INT, --min_voice=INT                   Numero minim de frames per decidir VOICE [default: 0]
+   -t TIME, --frame_duration=TIME            Duracio frames en ms [default: 10]
+   -s INT, --max_maybe_silence=INT           Numero de frames per decidir SILENCE [default: 9]
+   -m INT, --max_maybe_voice=INT             Numero de frames per decidir VOICE [default: 67]
+   -p INT, --pinit=INT                       Numero de frames per calcular potencia inicial [default: 8]
    -v, --verbose                             Show debug information
    -h, --help                                Show this screen
    --version                                 Show the version of the project
