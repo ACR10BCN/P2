@@ -112,6 +112,7 @@ int main(int argc, char *argv[]) {
 
     if (sndfile_out != 0) {
       /* TODO: copy all the samples into sndfile_out */
+      sf_writef_float(sndfile_out,buffer,frame_size);
     }
 
     state = vad(vad_data, buffer);
@@ -127,9 +128,16 @@ int main(int argc, char *argv[]) {
       }
       if (t != last_t){
         //En el cas d'entrar en un estat diferent al indefinit i que el anteior si sigui indefinit, comencem a contar el temps i guardem l'estat anterior
-        if ((state != undef_state) || (last_state == ST_UNDEF)){
-          
-          fprintf(vadfile, "%.5f\t%.5f\t%s\n", last_t * frame_duration, t * frame_duration, state2str(last_state));
+        if ((state != undef_state) && (last_state == ST_UNDEF)){
+          if(undef_state == ST_SILENCE){
+            if (sndfile_out != 0) {
+              sf_seek(sndfile_out,last_t*frame_size,SEEK_SET);
+              sf_writef_float(sndfile_out,buffer_zeros,(t_undef-last_t)*frame_size);
+            //TODO: go back and write zeros in silence segments
+            //DONE
+            }
+          }
+          fprintf(vadfile, "%.5f\t%.5f\t%s\n", last_t * frame_duration, t_undef * frame_duration, state2str(undef_state));
           last_state = state;
           last_t = t_undef;
 
