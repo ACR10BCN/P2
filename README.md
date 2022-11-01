@@ -107,7 +107,7 @@ Ejercicios
 <picture>
   
 
-  <image src="/PAV/P2/img/audio_lebels_i_potencia.png)" alt="Captura de wavesurfer senyal de veu  amb l'etiquetat manual i la potència">
+  <image src=https://github.com/ACR10BCN/P2/blob/bardaji-cot/img/audio_labels_i_potencia.png>
   
 
 </picture>
@@ -140,7 +140,7 @@ Ejercicios
 - Inserte una gráfica en la que se vea con claridad la señal temporal, el etiquetado manual y la detección
   automática conseguida para el fichero grabado al efecto. 
 <picture>
-<image src=" /PAV/P2/img/comparació_labels_a_ma_i_fets_amb_algorisme.png)" alt=" Gràfica wavesurfer comparació etiquetatge manual i l'automàtica">
+<image src=https://github.com/ACR10BCN/P2/blob/bardaji-cot/img/comparaci%C3%B3_labels_a_ma_i_fets_amb_algorisme.png>
 </picture>
 
 - Explique, si existen. las discrepancias entre el etiquetado manual y la detección automática.
@@ -179,12 +179,12 @@ En la imatge superior tenim la senyal de veu inicial i en la segona, un cop hem 
   una captura de pantalla en la que se vea el mensaje de ayuda del programa.
 
 <picture>
-<image src="/PAV/P2/img/ampliable2_comprovacio.png)" alt="Definició dels paràmetres des de la terminal">
+<image src=https://github.com/ACR10BCN/P2/blob/bardaji-cot/img/ampliable2_comprovacio.png>
 
 </picture>
 
 <picture>
-<image src="/PAV/P2/img/captura_docopt_c_ampliable2.png)" alt="Missatge d'ajuda del programa vad">
+<image src=https://github.com/ACR10BCN/P2/blob/bardaji-cot/img/captura_docopt_c_ampliable2.png>
 
 En la primera imatge observem com des de la terminal podem determinar els valors per defecte dels paràmetres.
 
