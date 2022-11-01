@@ -47,7 +47,7 @@ const char help_message[] =
 "   -o FILE, --output-vad=FILE                Label file with the result of VAD\n"
 "   -w FILE, --output-wav=FILE                WAVE file with silences cleared\n"
 "   -1 FLOAT, --alpha1=FLOAT                  Guany per obtenir el llindar de deteccio 1 [default: 1.83]\n"
-"   -2 FLOAT, --alpha2=FLOAT                  Guany per obtenir el llindar de deteccio 2 [default: 7.59]\n"
+"   -2 FLOAT, --alpha2=FLOAT                  Guany per obtenir el llindar de deteccio 2 [default: 7.67]\n"
 "   -3 FLOAT, --alpha1zero=FLOAT              Guany per obtenir el llindar de deteccio de 1 [default: 1825]\n"
 "   -4 FLOAT, --alpha2zero=FLOAT              Guany per obtenir el llindar de deteccio de 2 [default: 750]\n"
 "   -5 INT, --min_silence=INT                 Numero minim de frames per decidir SILENCE [default: 6]\n"
@@ -349,7 +349,7 @@ int elems_to_args(Elements *elements, DocoptArgs *args, bool help,
 
 DocoptArgs docopt(int argc, char *argv[], bool help, const char *version) {
     DocoptArgs args = {
-        0, 0, 0, (char*) "1.83", (char*) "1825", (char*) "7.59", (char*) "750",
+        0, 0, 0, (char*) "1.83", (char*) "1825", (char*) "7.67", (char*) "750",
         (char*) "10", NULL, (char*) "9", (char*) "67", (char*) "6", (char*) "0",
         NULL, NULL, (char*) "8",
         usage_pattern, help_message

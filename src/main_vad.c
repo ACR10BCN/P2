@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
   int frame_size;         /* in samples */
   float frame_duration;   /* in seconds */
   unsigned int t, last_t; /* in frames */
-  unsigned int t_undef;
+  unsigned int t_undef;   /* in frames */
 
   float alpha1;
   float alpha2;
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
   int max_maybe_voice;
   int min_silence;
   int min_voice;
-  
+
   int pinit;
   char	*input_wav, *output_vad, *output_wav;
   DocoptArgs args = docopt(argc, argv, /* help */ 1, /* version */ "2.0");
@@ -77,7 +77,6 @@ int main(int argc, char *argv[]) {
     return -2;
   }
 
-
   /* Open vad file */
   if ((vadfile = fopen(output_vad, "wt")) == 0) {
     fprintf(stderr, "Error opening output vad file %s (%s)\n", output_vad, strerror(errno));
@@ -116,7 +115,8 @@ int main(int argc, char *argv[]) {
       sf_writef_float(sndfile_out,buffer,frame_size);
     }
 
-    state = vad(vad_data, buffer);
+    state = vad(vad_data, buffer);    
+
     if (verbose & DEBUG_VAD) vad_show_state(vad_data, stdout);
 
     /* TODO: print only SILENCE and VOICE labels */
@@ -124,8 +124,8 @@ int main(int argc, char *argv[]) {
     if (state != last_state) {
       //En el cas d'entrar en l'estat UNDEF, guardem el estat en el que es trobava anteriorment i el valor de t
       if(state == ST_UNDEF){
-        t_undef = t;
         undef_state = last_state;
+        t_undef = t;
       }
       if (t != last_t){
         //En el cas d'entrar en un estat diferent al indefinit i que el anteior si sigui indefinit, comencem a contar el temps i guardem l'estat anterior
@@ -154,12 +154,55 @@ int main(int argc, char *argv[]) {
     //Primera pregunta del ampliable (intent)
 
     if (sndfile_out != 0) {
+
       /* TODO: go back and write zeros in silence segments */
-      if (state == ST_SILENCE && sndfile_out != 0) {
-      sf_seek(sndfile_out, -frame_size, SEEK_CUR);
-      sf_write_float(sndfile_out, buffer_zeros, frame_size);
-    }
-      last_state = state;
+
+          if (last_state == ST_SILENCE) {
+          sf_seek(sndfile_out, -frame_size, SEEK_CUR);
+          sf_write_float(sndfile_out, buffer_zeros, frame_size);
+          //printf("_");
+        }else{
+          //printf("-");
+        }
+       
+
+      // if(state == ST_SILENCE){
+      //     n_write = sf_write_float(sndfile_out,buffer_zeros,frame_size);
+      //     //printf('_');
+      //   } else {
+      //     n_write = sf_write_float(sndfile_out, buffer, frame_size); 
+      //     //printf('-');
+      //   }
+
+        //if (state == ST_SILENCE){
+      
+        // Nos colocamos en la posición de la trama de silencio que acabamos de escribir desde la posición actual (SEEK_CUR)
+        // if (sf_seek(sndfile_out, (-1) * frame_size, SEEK_CUR) == -1)
+        // {
+        //     printf("bb");
+        // }
+        
+        // // Sobreescribimos el fichero .wav
+        // if ((n_write = sf_write_float(sndfile_out, buffer_zeros, frame_size)) != frame_size)
+        // {
+        //     printf("aa");
+        // }
+
+      //}
+
+      
+        // if (state == ST_SILENCE)
+        // {
+        //   n_write = sf_write_float(sndfile_out, buffer_zeros, frame_size);
+        //   printf("_");
+        // }
+        // else
+        // {
+        //   n_write = sf_write_float(sndfile_out, buffer, frame_size);
+        //   printf("-");
+        // }
+
+      //last_state = state;
     }
   }
 

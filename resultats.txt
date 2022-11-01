@@ -1,0 +1,485 @@
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4151.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4152.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4161.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4171.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4172.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4305.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4311.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4341.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2109.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2110.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2151.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2152.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2171.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2172.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_1341.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4111.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4112.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_41191.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_41192.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_412_1.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4131.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4132.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4151.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4161.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_418.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4311.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4312.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4313.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4321.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4331.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4351.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q2/pav_1121.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q2/pav_1131.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q2/pav_1141.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q2/pav_1171.wav ****************
+**************** /home/artur/PAV/P2/db.v4/201617q2/pav_2151.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_1131.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4115.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4131.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4141.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4161.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4171.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4341.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_137.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2121.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2141.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2142.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2171.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2191.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_231.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_232.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_233.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2342.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_236.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_237.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_238.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_239.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4111.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4112.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4121.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4122.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4131.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4132.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4141.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4151.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4161.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4171.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4172.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4181.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4182.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4341.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4342.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4351.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4352.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4361.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4362.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4371.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4372.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4382.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4385.wav ****************
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4151.lab ****************
+Recall V:  6.94/6.94  100.00%   Precision V:  6.94/8.06   86.10%   F-score V (2)  : 96.87%
+Recall S:  2.01/3.13   64.23%   Precision S:  2.01/2.01  100.00%   F-score S (1/2): 89.98%
+===> /home/artur/PAV/P2/db.v4/2014/pav_4151.lab: 93.361%
+
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4152.lab ****************
+Recall V: 27.62/28.13  98.18%   Precision V: 27.62/29.14  94.77%   F-score V (2)  : 97.48%
+Recall S:  5.12/6.64   77.06%   Precision S:  5.12/5.63   90.93%   F-score S (1/2): 87.77%
+===> /home/artur/PAV/P2/db.v4/2014/pav_4152.lab: 92.497%
+
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4161.lab ****************
+Recall V:  3.08/3.09   99.76%   Precision V:  3.08/3.52   87.64%   F-score V (2)  : 97.07%
+Recall S:  0.99/1.43   69.53%   Precision S:  0.99/1.00   99.25%   F-score S (1/2): 91.43%
+===> /home/artur/PAV/P2/db.v4/2014/pav_4161.lab: 94.212%
+
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4171.lab ****************
+Recall V:  4.91/5.02   97.75%   Precision V:  4.91/5.05   97.17%   F-score V (2)  : 97.63%
+Recall S:  0.94/1.08   86.82%   Precision S:  0.94/1.06   89.28%   F-score S (1/2): 88.78%
+===> /home/artur/PAV/P2/db.v4/2014/pav_4171.lab: 93.098%
+
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4172.lab ****************
+Recall V:  5.50/5.57   98.80%   Precision V:  5.50/5.57   98.74%   F-score V (2)  : 98.79%
+Recall S:  0.28/0.35   80.14%   Precision S:  0.28/0.35   80.94%   F-score S (1/2): 80.78%
+===> /home/artur/PAV/P2/db.v4/2014/pav_4172.lab: 89.331%
+
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4305.lab ****************
+Recall V:  3.04/3.06   99.25%   Precision V:  3.04/3.26   93.17%   F-score V (2)  : 97.97%
+Recall S:  2.27/2.49   91.06%   Precision S:  2.27/2.29   99.00%   F-score S (1/2): 97.30%
+===> /home/artur/PAV/P2/db.v4/2014/pav_4305.lab: 97.638%
+
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4311.lab ****************
+Recall V: 18.69/18.83  99.26%   Precision V: 18.69/20.30  92.08%   F-score V (2)  : 97.73%
+Recall S:  3.14/4.75   66.14%   Precision S:  3.14/3.28   95.73%   F-score S (1/2): 87.87%
+===> /home/artur/PAV/P2/db.v4/2014/pav_4311.lab: 92.670%
+
+**************** /home/artur/PAV/P2/db.v4/2014/pav_4341.lab ****************
+Recall V:  9.93/10.00  99.30%   Precision V:  9.93/11.01  90.19%   F-score V (2)  : 97.33%
+Recall S:  3.90/4.98   78.32%   Precision S:  3.90/3.97   98.24%   F-score S (1/2): 93.48%
+===> /home/artur/PAV/P2/db.v4/2014/pav_4341.lab: 95.389%
+
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2109.lab ****************
+Recall V:  2.26/2.32   97.06%   Precision V:  2.26/2.50   90.24%   F-score V (2)  : 95.62%
+Recall S:  1.52/1.76   86.18%   Precision S:  1.52/1.59   95.70%   F-score S (1/2): 93.63%
+===> /home/artur/PAV/P2/db.v4/2015/pav_2109.lab: 94.619%
+
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2110.lab ****************
+Recall V:  2.77/2.81   98.58%   Precision V:  2.77/2.92   94.95%   F-score V (2)  : 97.83%
+Recall S:  1.37/1.51   90.26%   Precision S:  1.37/1.41   97.16%   F-score S (1/2): 95.69%
+===> /home/artur/PAV/P2/db.v4/2015/pav_2110.lab: 96.755%
+
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2151.lab ****************
+Recall V: 13.15/13.22  99.44%   Precision V: 13.15/15.11  87.00%   F-score V (2)  : 96.67%
+Recall S: 12.11/14.07  86.04%   Precision S: 12.11/12.18  99.39%   F-score S (1/2): 96.40%
+===> /home/artur/PAV/P2/db.v4/2015/pav_2151.lab: 96.536%
+
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2152.lab ****************
+Recall V:  6.94/6.94   99.96%   Precision V:  6.94/8.31   83.45%   F-score V (2)  : 96.16%
+Recall S:  5.15/6.52   78.92%   Precision S:  5.15/5.15   99.95%   F-score S (1/2): 94.89%
+===> /home/artur/PAV/P2/db.v4/2015/pav_2152.lab: 95.525%
+
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2171.lab ****************
+Recall V:  2.54/2.57   99.01%   Precision V:  2.54/2.93   86.70%   F-score V (2)  : 96.27%
+Recall S:  1.55/1.94   79.86%   Precision S:  1.55/1.57   98.38%   F-score S (1/2): 94.02%
+===> /home/artur/PAV/P2/db.v4/2015/pav_2171.lab: 95.139%
+
+**************** /home/artur/PAV/P2/db.v4/2015/pav_2172.lab ****************
+Recall V:  2.67/2.70   99.05%   Precision V:  2.67/3.88   68.84%   F-score V (2)  : 91.06%
+Recall S:  4.81/6.02   79.93%   Precision S:  4.81/4.84   99.47%   F-score S (1/2): 94.83%
+===> /home/artur/PAV/P2/db.v4/2015/pav_2172.lab: 92.925%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_1341.lab ****************
+Recall V:  2.01/2.07   97.15%   Precision V:  2.01/2.52   79.81%   F-score V (2)  : 93.10%
+Recall S:  1.98/2.49   79.53%   Precision S:  1.98/2.04   97.10%   F-score S (1/2): 92.99%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_1341.lab: 93.049%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4111.lab ****************
+Recall V:  5.57/5.63   98.87%   Precision V:  5.57/7.24   76.89%   F-score V (2)  : 93.52%
+Recall S:  3.09/4.76   64.85%   Precision S:  3.09/3.15   97.98%   F-score S (1/2): 88.89%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4111.lab: 91.178%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4112.lab ****************
+Recall V:  2.86/2.95   97.06%   Precision V:  2.86/4.84   59.12%   F-score V (2)  : 86.02%
+Recall S:  4.67/6.65   70.26%   Precision S:  4.67/4.76   98.18%   F-score S (1/2): 90.95%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4112.lab: 88.451%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_41191.lab ****************
+Recall V:  2.96/3.04   97.42%   Precision V:  2.96/3.08   96.17%   F-score V (2)  : 97.17%
+Recall S:  3.52/3.64   96.75%   Precision S:  3.52/3.60   97.82%   F-score S (1/2): 97.60%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_41191.lab: 97.384%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_41192.lab ****************
+Recall V:  2.27/2.37   95.83%   Precision V:  2.27/2.48   91.55%   F-score V (2)  : 94.94%
+Recall S:  5.83/6.04   96.53%   Precision S:  5.83/5.93   98.34%   F-score S (1/2): 97.97%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_41192.lab: 96.444%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_412_1.lab ****************
+Recall V:  3.80/4.22   90.01%   Precision V:  3.80/3.88   98.00%   F-score V (2)  : 91.50%
+Recall S:  2.91/2.99   97.41%   Precision S:  2.91/3.33   87.32%   F-score S (1/2): 89.17%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_412_1.lab: 90.328%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4131.lab ****************
+Recall V:  3.40/3.44   98.84%   Precision V:  3.40/4.49   75.74%   F-score V (2)  : 93.16%
+Recall S:  1.02/2.10   48.24%   Precision S:  1.02/1.06   96.21%   F-score S (1/2): 80.25%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4131.lab: 86.461%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4132.lab ****************
+Recall V:  3.31/3.35   98.81%   Precision V:  3.31/4.49   73.80%   F-score V (2)  : 92.54%
+Recall S:  1.02/2.19   46.32%   Precision S:  1.02/1.06   96.21%   F-score S (1/2): 79.16%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4132.lab: 85.587%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4151.lab ****************
+Recall V:  2.08/2.11   98.54%   Precision V:  2.08/2.49   83.36%   F-score V (2)  : 95.07%
+Recall S:  1.57/1.98   79.07%   Precision S:  1.57/1.60   98.07%   F-score S (1/2): 93.57%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4151.lab: 94.321%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4161.lab ****************
+Recall V:  2.23/2.34   95.20%   Precision V:  2.23/2.46   90.62%   F-score V (2)  : 94.24%
+Recall S:  0.80/1.03   77.54%   Precision S:  0.80/0.91   87.62%   F-score S (1/2): 85.40%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4161.lab: 89.714%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_418.lab ****************
+Recall V:  3.03/3.10   98.02%   Precision V:  3.03/3.42   88.72%   F-score V (2)  : 96.01%
+Recall S:  4.43/4.82   91.99%   Precision S:  4.43/4.49   98.64%   F-score S (1/2): 97.23%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_418.lab: 96.618%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4311.lab ****************
+Recall V:  1.68/1.68   99.85%   Precision V:  1.68/2.35   71.40%   F-score V (2)  : 92.48%
+Recall S:  2.11/2.78   75.83%   Precision S:  2.11/2.11   99.88%   F-score S (1/2): 93.92%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4311.lab: 93.198%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4312.lab ****************
+Recall V:  3.10/3.11   99.68%   Precision V:  3.10/3.54   87.71%   F-score V (2)  : 97.03%
+Recall S:  1.28/1.72   74.70%   Precision S:  1.28/1.29   99.23%   F-score S (1/2): 93.11%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4312.lab: 95.052%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4313.lab ****************
+Recall V:  1.92/1.92   99.87%   Precision V:  1.92/2.36   81.14%   F-score V (2)  : 95.46%
+Recall S:  1.49/1.94   77.03%   Precision S:  1.49/1.49   99.83%   F-score S (1/2): 94.25%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4313.lab: 94.856%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4321.lab ****************
+Recall V:  4.44/4.59   96.70%   Precision V:  4.44/5.66   78.48%   F-score V (2)  : 92.41%
+Recall S:  4.30/5.52   77.94%   Precision S:  4.30/4.45   96.60%   F-score S (1/2): 92.18%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4321.lab: 92.296%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4331.lab ****************
+Recall V:  5.74/5.78   99.36%   Precision V:  5.74/6.20   92.61%   F-score V (2)  : 97.94%
+Recall S:  2.77/3.23   85.81%   Precision S:  2.77/2.81   98.69%   F-score S (1/2): 95.81%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4331.lab: 96.870%
+
+**************** /home/artur/PAV/P2/db.v4/201617q1/pav_4351.lab ****************
+Recall V:  3.38/3.42   98.65%   Precision V:  3.38/3.75   90.10%   F-score V (2)  : 96.81%
+Recall S:  3.83/4.20   91.16%   Precision S:  3.83/3.88   98.81%   F-score S (1/2): 97.18%
+===> /home/artur/PAV/P2/db.v4/201617q1/pav_4351.lab: 96.995%
+
+**************** /home/artur/PAV/P2/db.v4/201617q2/pav_1121.lab ****************
+Recall V:  8.41/8.47   99.29%   Precision V:  8.41/10.32  81.52%   F-score V (2)  : 95.14%
+Recall S:  2.04/3.94   51.62%   Precision S:  2.04/2.10   97.14%   F-score S (1/2): 82.58%
+===> /home/artur/PAV/P2/db.v4/201617q2/pav_1121.lab: 88.637%
+
+**************** /home/artur/PAV/P2/db.v4/201617q2/pav_1131.lab ****************
+Recall V:  3.48/3.49   99.79%   Precision V:  3.48/3.82   91.23%   F-score V (2)  : 97.95%
+Recall S:  1.66/2.00   83.21%   Precision S:  1.66/1.67   99.55%   F-score S (1/2): 95.79%
+===> /home/artur/PAV/P2/db.v4/201617q2/pav_1131.lab: 96.862%
+
+**************** /home/artur/PAV/P2/db.v4/201617q2/pav_1141.lab ****************
+Recall V:  3.76/3.97   94.65%   Precision V:  3.76/3.76  100.00%   F-score V (2)  : 95.67%
+Recall S:  3.61/3.61  100.00%   Precision S:  3.61/3.82   94.44%   F-score S (1/2): 95.50%
+===> /home/artur/PAV/P2/db.v4/201617q2/pav_1141.lab: 95.588%
+
+**************** /home/artur/PAV/P2/db.v4/201617q2/pav_1171.lab ****************
+Recall V: 12.32/12.61  97.68%   Precision V: 12.32/14.53  84.79%   F-score V (2)  : 94.80%
+Recall S:  6.57/8.78   74.83%   Precision S:  6.57/6.86   95.74%   F-score S (1/2): 90.67%
+===> /home/artur/PAV/P2/db.v4/201617q2/pav_1171.lab: 92.711%
+
+**************** /home/artur/PAV/P2/db.v4/201617q2/pav_2151.lab ****************
+Recall V:  5.31/5.32   99.81%   Precision V:  5.31/6.16   86.20%   F-score V (2)  : 96.76%
+Recall S:  1.19/2.04   58.29%   Precision S:  1.19/1.20   99.17%   F-score S (1/2): 86.97%
+===> /home/artur/PAV/P2/db.v4/201617q2/pav_2151.lab: 91.735%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_1131.lab ****************
+Recall V:  7.29/7.38   98.88%   Precision V:  7.29/7.70   94.74%   F-score V (2)  : 98.02%
+Recall S:  3.64/4.04   89.99%   Precision S:  3.64/3.72   97.78%   F-score S (1/2): 96.12%
+===> /home/artur/PAV/P2/db.v4/2017-18q1/pav_1131.lab: 97.067%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4115.lab ****************
+Recall V:  1.42/1.42  100.00%   Precision V:  1.42/1.87   75.94%   F-score V (2)  : 94.04%
+Recall S:  0.53/0.98   54.01%   Precision S:  0.53/0.53  100.00%   F-score S (1/2): 85.45%
+===> /home/artur/PAV/P2/db.v4/2017-18q1/pav_4115.lab: 89.642%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4131.lab ****************
+Recall V: 11.21/11.49  97.55%   Precision V: 11.21/12.35  90.78%   F-score V (2)  : 96.12%
+Recall S:  5.09/6.23   81.72%   Precision S:  5.09/5.37   94.77%   F-score S (1/2): 91.83%
+===> /home/artur/PAV/P2/db.v4/2017-18q1/pav_4131.lab: 93.952%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4141.lab ****************
+Recall V:  4.55/4.68   97.25%   Precision V:  4.55/4.99   91.22%   F-score V (2)  : 95.98%
+Recall S:  1.86/2.30   80.97%   Precision S:  1.86/1.99   93.54%   F-score S (1/2): 90.73%
+===> /home/artur/PAV/P2/db.v4/2017-18q1/pav_4141.lab: 93.317%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4161.lab ****************
+Recall V:  2.10/2.17   96.66%   Precision V:  2.10/2.47   84.92%   F-score V (2)  : 94.06%
+Recall S:  1.55/1.93   80.67%   Precision S:  1.55/1.63   95.55%   F-score S (1/2): 92.15%
+===> /home/artur/PAV/P2/db.v4/2017-18q1/pav_4161.lab: 93.098%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4171.lab ****************
+Recall V:  6.00/6.06   99.08%   Precision V:  6.00/6.33   94.78%   F-score V (2)  : 98.19%
+Recall S:  4.90/5.23   93.69%   Precision S:  4.90/4.96   98.87%   F-score S (1/2): 97.79%
+===> /home/artur/PAV/P2/db.v4/2017-18q1/pav_4171.lab: 97.988%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q1/pav_4341.lab ****************
+Recall V:  5.30/5.30  100.00%   Precision V:  5.30/7.23   73.27%   F-score V (2)  : 93.20%
+Recall S:  2.03/3.96   51.22%   Precision S:  2.03/2.03  100.00%   F-score S (1/2): 84.00%
+===> /home/artur/PAV/P2/db.v4/2017-18q1/pav_4341.lab: 88.479%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_137.lab ****************
+Recall V:  2.54/2.65   95.86%   Precision V:  2.54/2.93   86.86%   F-score V (2)  : 93.91%
+Recall S:  1.14/1.53   74.82%   Precision S:  1.14/1.25   91.23%   F-score S (1/2): 87.39%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_137.lab: 90.593%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2121.lab ****************
+Recall V:  4.10/4.42   92.91%   Precision V:  4.10/4.28   95.86%   F-score V (2)  : 93.48%
+Recall S:  3.54/3.72   95.23%   Precision S:  3.54/3.85   91.88%   F-score S (1/2): 92.53%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_2121.lab: 93.006%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2141.lab ****************
+Recall V:  3.98/3.99   99.75%   Precision V:  3.98/4.23   94.15%   F-score V (2)  : 98.58%
+Recall S:  1.70/1.95   87.30%   Precision S:  1.70/1.71   99.42%   F-score S (1/2): 96.73%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_2141.lab: 97.649%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2142.lab ****************
+Recall V:  3.58/3.58   99.93%   Precision V:  3.58/4.42   81.00%   F-score V (2)  : 95.47%
+Recall S:  0.41/1.25   32.64%   Precision S:  0.41/0.41   99.39%   F-score S (1/2): 70.54%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_2142.lab: 82.062%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2171.lab ****************
+Recall V:  3.61/3.67   98.35%   Precision V:  3.61/4.38   82.42%   F-score V (2)  : 94.69%
+Recall S:  5.97/6.74   88.57%   Precision S:  5.97/6.03   98.99%   F-score S (1/2): 96.72%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_2171.lab: 95.696%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2191.lab ****************
+Recall V:  4.06/4.11   98.90%   Precision V:  4.06/4.29   94.64%   F-score V (2)  : 98.02%
+Recall S:  2.69/2.92   92.11%   Precision S:  2.69/2.73   98.35%   F-score S (1/2): 97.04%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_2191.lab: 97.528%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_231.lab ****************
+Recall V:  4.88/4.97   98.30%   Precision V:  4.88/7.33   66.64%   F-score V (2)  : 89.77%
+Recall S:  2.71/5.15   52.53%   Precision S:  2.71/2.79   96.96%   F-score S (1/2): 82.93%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_231.lab: 86.281%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_232.lab ****************
+Recall V:  2.95/2.95  100.00%   Precision V:  2.95/4.09   72.14%   F-score V (2)  : 92.83%
+Recall S:  1.24/2.38   52.12%   Precision S:  1.24/1.24  100.00%   F-score S (1/2): 84.48%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_232.lab: 88.557%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_233.lab ****************
+Recall V:  3.40/3.46   98.31%   Precision V:  3.40/4.00   85.04%   F-score V (2)  : 95.34%
+Recall S:  2.47/3.07   80.52%   Precision S:  2.47/2.53   97.70%   F-score S (1/2): 93.70%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_233.lab: 94.514%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_2342.lab ****************
+Recall V:  2.30/2.39   96.15%   Precision V:  2.30/2.51   91.73%   F-score V (2)  : 95.23%
+Recall S:  1.73/1.94   89.31%   Precision S:  1.73/1.83   94.95%   F-score S (1/2): 93.76%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_2342.lab: 94.494%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_236.lab ****************
+Recall V:  3.35/3.36   99.63%   Precision V:  3.35/3.72   90.05%   F-score V (2)  : 97.55%
+Recall S:  1.34/1.71   78.42%   Precision S:  1.34/1.36   99.08%   F-score S (1/2): 94.12%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_236.lab: 95.822%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_237.lab ****************
+Recall V:  5.23/5.32   98.21%   Precision V:  5.23/5.93   88.12%   F-score V (2)  : 96.01%
+Recall S:  2.04/2.74   74.34%   Precision S:  2.04/2.14   95.55%   F-score S (1/2): 90.39%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_237.lab: 93.161%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_238.lab ****************
+Recall V:  4.29/4.56   94.08%   Precision V:  4.29/4.58   93.67%   F-score V (2)  : 94.00%
+Recall S:  2.46/2.75   89.44%   Precision S:  2.46/2.73   90.10%   F-score S (1/2): 89.97%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_238.lab: 91.961%
+
+**************** /home/artur/PAV/P2/db.v4/2017-18q2/pav_239.lab ****************
+Recall V:  5.64/5.71   98.66%   Precision V:  5.64/6.04   93.32%   F-score V (2)  : 97.54%
+Recall S:  2.26/2.66   84.85%   Precision S:  2.26/2.34   96.72%   F-score S (1/2): 94.09%
+===> /home/artur/PAV/P2/db.v4/2017-18q2/pav_239.lab: 95.802%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4111.lab ****************
+Recall V:  2.86/2.92   97.84%   Precision V:  2.86/3.25   87.95%   F-score V (2)  : 95.69%
+Recall S:  3.24/3.63   89.22%   Precision S:  3.24/3.30   98.09%   F-score S (1/2): 96.17%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4111.lab: 95.930%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4112.lab ****************
+Recall V:  0.90/1.29   69.90%   Precision V:  0.90/1.09   83.00%   F-score V (2)  : 72.18%
+Recall S:  1.72/1.90   90.27%   Precision S:  1.72/2.11   81.52%   F-score S (1/2): 83.13%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4112.lab: 77.460%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4121.lab ****************
+Recall V:  2.99/2.99  100.00%   Precision V:  2.99/3.67   81.50%   F-score V (2)  : 95.66%
+Recall S:  2.47/3.15   78.45%   Precision S:  2.47/2.47  100.00%   F-score S (1/2): 94.79%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4121.lab: 95.223%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4122.lab ****************
+Recall V:  1.25/1.26   99.68%   Precision V:  1.25/1.55   80.71%   F-score V (2)  : 95.21%
+Recall S:  0.98/1.27   76.55%   Precision S:  0.98/0.98   99.59%   F-score S (1/2): 93.94%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4122.lab: 94.568%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4131.lab ****************
+Recall V: 13.78/13.83  99.69%   Precision V: 13.78/14.28  96.51%   F-score V (2)  : 99.04%
+Recall S:  2.81/3.31   84.97%   Precision S:  2.81/2.86   98.49%   F-score S (1/2): 95.45%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4131.lab: 97.229%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4132.lab ****************
+Recall V: 10.55/10.60  99.45%   Precision V: 10.55/10.86  97.11%   F-score V (2)  : 98.97%
+Recall S:  1.53/1.84   82.98%   Precision S:  1.53/1.59   96.32%   F-score S (1/2): 93.32%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4132.lab: 96.106%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4141.lab ****************
+Recall V:  2.94/2.94  100.00%   Precision V:  2.94/3.25   90.51%   F-score V (2)  : 97.95%
+Recall S:  0.47/0.77   60.19%   Precision S:  0.47/0.47  100.00%   F-score S (1/2): 88.32%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4141.lab: 93.008%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4151.lab ****************
+Recall V:  1.81/1.85   98.23%   Precision V:  1.81/1.96   92.48%   F-score V (2)  : 97.03%
+Recall S:  0.91/1.05   86.03%   Precision S:  0.91/0.94   96.53%   F-score S (1/2): 94.23%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4151.lab: 95.617%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4161.lab ****************
+Recall V:  3.23/3.37   95.82%   Precision V:  3.23/3.40   94.93%   F-score V (2)  : 95.64%
+Recall S:  1.59/1.76   90.21%   Precision S:  1.59/1.73   91.86%   F-score S (1/2): 91.52%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4161.lab: 93.562%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4171.lab ****************
+Recall V:  3.64/3.78   96.42%   Precision V:  3.64/3.93   92.70%   F-score V (2)  : 95.65%
+Recall S:  2.22/2.50   88.53%   Precision S:  2.22/2.35   94.25%   F-score S (1/2): 93.05%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4171.lab: 94.340%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4172.lab ****************
+Recall V:  2.70/3.00   90.16%   Precision V:  2.70/3.04   88.96%   F-score V (2)  : 89.92%
+Recall S:  1.93/2.27   85.22%   Precision S:  1.93/2.23   86.77%   F-score S (1/2): 86.45%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4172.lab: 88.170%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4181.lab ****************
+Recall V:  2.76/2.85   96.87%   Precision V:  2.76/3.32   83.26%   F-score V (2)  : 93.80%
+Recall S:  3.62/4.18   86.70%   Precision S:  3.62/3.71   97.59%   F-score S (1/2): 95.20%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4181.lab: 94.496%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4182.lab ****************
+Recall V:  3.57/3.64   98.01%   Precision V:  3.57/5.31   67.14%   F-score V (2)  : 89.76%
+Recall S:  3.82/5.57   68.65%   Precision S:  3.82/3.89   98.14%   F-score S (1/2): 90.38%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4182.lab: 90.067%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4341.lab ****************
+Recall V:  4.27/4.47   95.63%   Precision V:  4.27/4.45   96.00%   F-score V (2)  : 95.70%
+Recall S:  4.15/4.32   95.88%   Precision S:  4.15/4.34   95.50%   F-score S (1/2): 95.58%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4341.lab: 95.638%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4342.lab ****************
+Recall V:  3.20/4.30   74.26%   Precision V:  3.20/3.23   98.92%   F-score V (2)  : 78.15%
+Recall S:  4.15/4.18   99.16%   Precision S:  4.15/5.26   78.93%   F-score S (1/2): 82.29%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4342.lab: 80.195%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4351.lab ****************
+Recall V:  2.99/3.02   98.83%   Precision V:  2.99/3.23   92.52%   F-score V (2)  : 97.50%
+Recall S:  2.51/2.75   91.22%   Precision S:  2.51/2.54   98.61%   F-score S (1/2): 97.04%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4351.lab: 97.269%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4352.lab ****************
+Recall V:  4.07/4.08   99.82%   Precision V:  4.07/5.37   75.78%   F-score V (2)  : 93.86%
+Recall S:  0.52/1.82   28.46%   Precision S:  0.52/0.52   98.57%   F-score S (1/2): 66.04%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4352.lab: 78.730%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4361.lab ****************
+Recall V:  1.64/1.64  100.00%   Precision V:  1.64/2.96   55.36%   F-score V (2)  : 86.11%
+Recall S:  1.95/3.27   59.58%   Precision S:  1.95/1.95  100.00%   F-score S (1/2): 88.05%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4361.lab: 87.077%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4362.lab ****************
+Recall V:  2.70/2.70  100.00%   Precision V:  2.70/3.06   88.33%   F-score V (2)  : 97.43%
+Recall S:  1.54/1.89   81.14%   Precision S:  1.54/1.54  100.00%   F-score S (1/2): 95.56%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4362.lab: 96.488%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4371.lab ****************
+Recall V:  1.72/1.85   92.89%   Precision V:  1.72/1.97   87.30%   F-score V (2)  : 91.71%
+Recall S:  3.11/3.36   92.56%   Precision S:  3.11/3.24   95.94%   F-score S (1/2): 95.24%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4371.lab: 93.463%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4372.lab ****************
+Recall V:  2.07/2.07  100.00%   Precision V:  2.07/2.60   79.65%   F-score V (2)  : 95.14%
+Recall S:  2.83/3.36   84.24%   Precision S:  2.83/2.83  100.00%   F-score S (1/2): 96.39%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4372.lab: 95.762%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4382.lab ****************
+Recall V:  7.05/7.21   97.70%   Precision V:  7.05/8.19   86.02%   F-score V (2)  : 95.12%
+Recall S:  7.71/8.85   87.07%   Precision S:  7.71/7.87   97.89%   F-score S (1/2): 95.52%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4382.lab: 95.316%
+
+**************** /home/artur/PAV/P2/db.v4/2018-19q1/pav_4385.lab ****************
+Recall V:  3.19/3.24   98.37%   Precision V:  3.19/3.49   91.37%   F-score V (2)  : 96.89%
+Recall S:  3.37/3.67   91.79%   Precision S:  3.37/3.42   98.46%   F-score S (1/2): 97.05%
+===> /home/artur/PAV/P2/db.v4/2018-19q1/pav_4385.lab: 96.967%
+
+**************** Summary ****************
+Recall V:374.78/382.74 97.92%   Precision V:374.78/428.52 87.46%   F-score V (2)  : 95.63%
+Recall S:217.26/271.01 80.17%   Precision S:217.26/225.23 96.46%   F-score S (1/2): 92.70%
+===> TOTAL: 94.152%
+

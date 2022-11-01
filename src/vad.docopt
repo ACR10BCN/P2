@@ -10,7 +10,7 @@ Options:
    -o FILE, --output-vad=FILE                Label file with the result of VAD
    -w FILE, --output-wav=FILE                WAVE file with silences cleared
    -1 FLOAT, --alpha1=FLOAT                  Guany per obtenir el llindar de deteccio 1 [default: 1.83]
-   -2 FLOAT, --alpha2=FLOAT                  Guany per obtenir el llindar de deteccio 2 [default: 7.59]
+   -2 FLOAT, --alpha2=FLOAT                  Guany per obtenir el llindar de deteccio 2 [default: 7.67]
    -3 FLOAT, --alpha1zero=FLOAT              Guany per obtenir el llindar de deteccio de 1 [default: 1825]
    -4 FLOAT, --alpha2zero=FLOAT              Guany per obtenir el llindar de deteccio de 2 [default: 750]
    -5 INT, --min_silence=INT                 Numero minim de frames per decidir SILENCE [default: 6]
