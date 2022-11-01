@@ -133,7 +133,7 @@ Ejercicios
 - Complete el código de los ficheros de la práctica para implementar un detector de actividad vocal en
   tiempo real tan exacto como sea posible. Tome como objetivo la maximización de la puntuación-F `TOTAL`.
 <picture>
-<image src="/PAV/P2/img/score_total.png)" alt="Maximització F">
+<image src=https://github.com/ACR10BCN/P2/blob/bardaji-cot/img/score_total.png>
 
 </picture>
 
@@ -152,7 +152,7 @@ En la imatge podem observar, com a d'alt tenim l'etiquetatge manual, realitzat p
   el resumen).
 
 <picture>
-<image src="/PAV/P2/img/score_total.png)" alt="Maximització F">
+<image src=https://github.com/ACR10BCN/P2/blob/bardaji-cot/img/score_total.png>
 
 </picture>
 
@@ -167,7 +167,7 @@ Hem obtingut un valor d'F de 94,152% per al conjunt de senyals de la base de dad
   mejor opción para esto, ya que no es capaz de visualizar varias señales al mismo tiempo).
 
  <picture>
-<image src="/PAV/P2/img/ampliable1_abans_i_despres.png)" alt="Comparació algorisme cancelació segments de silenci">
+<image src=https://github.com/ACR10BCN/P2/blob/bardaji-cot/img/ampliable1_abans_i_despres.png>
 
 </picture>
 
